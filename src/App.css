@@ -1,0 +1,81 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #E5DFBE;   /* beige */
+  color: #584130;              /* dark brown */
+  font-family: 'Aptos Mono', monospace;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 1.5em;
+  border: 2px solid #584130;   /* dark brown */
+  background: #E5DFBE;         /* beige */
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #58413088); /* dark brown accent */
+  border-color: #E5DFBE;                  /* beige */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #E5DFBEaa); /* beige accent */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fade-in {
+  animation: fade-in 0.7s ease-in-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: #E5DFBE;         /* beige */
+  border: 1px solid #584130;   /* dark brown */
+  border-radius: 1em;
+  color: #584130;              /* dark brown */
+  box-shadow: 0 2px 8px #58413033; /* subtle dark brown shadow */
+}
+
+.read-the-docs {
+  color: #58413099;            /* dark brown, lighter for secondary text */
+}
+.modal-scrollable {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+@keyframes kenburnsZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+/* Use this class for a slow (4s) zoom-in effect */
+.kenburns-active {
+  animation: kenburnsZoom 4s linear forwards;
+}

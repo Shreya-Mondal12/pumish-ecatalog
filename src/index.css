@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Aptos';
+  src: url('/fonts/Aptos.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aptos';
+  src: url('/fonts/Aptos-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aptos';
+  src: url('/fonts/Aptos-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@layer base {
+  :root {
+    /* Light mode (beige & dark brown) */
+    --background: 44 46% 85%;             /* #E5DFBE */
+    --foreground: 25 32% 27%;             /* #584130 */
+
+    --card: 44 46% 85%;                   /* #E5DFBE */
+    --card-foreground: 25 32% 27%;        /* #584130 */
+
+    --popover: 44 46% 85%;                /* #E5DFBE */
+    --popover-foreground: 25 32% 27%;     /* #584130 */
+
+    --primary: 25 32% 27%;                /* #584130 */
+    --primary-foreground: 44 46% 85%;     /* #E5DFBE */
+
+    --secondary: 44 46% 85%;              /* #E5DFBE */
+    --secondary-foreground: 25 32% 27%;   /* #584130 */
+
+    --muted: 44 46% 92%;                  /* lighter beige */
+    --muted-foreground: 25 32% 45%;       /* lighter brown */
+
+    --accent: 25 32% 27%;                 /* #584130 */
+    --accent-foreground: 44 46% 85%;      /* #E5DFBE */
+
+    --destructive: 0 70% 40%;             /* muted red for destructive */
+    --destructive-foreground: 44 46% 85%; /* #E5DFBE */
+
+    --border: 25 32% 27%;                 /* #584130 */
+    --input: 44 46% 85%;                  /* #E5DFBE */
+    --ring: 25 32% 27%;                   /* #584130 */
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 44 46% 85%;     /* #E5DFBE */
+    --sidebar-foreground: 25 32% 27%;     /* #584130 */
+    --sidebar-primary: 25 32% 27%;        /* #584130 */
+    --sidebar-primary-foreground: 44 46% 85%; /* #E5DFBE */
+    --sidebar-accent: 44 46% 92%;         /* lighter beige */
+    --sidebar-accent-foreground: 25 32% 27%; /* #584130 */
+    --sidebar-border: 25 32% 27%;         /* #584130 */
+    --sidebar-ring: 44 46% 85%;           /* #E5DFBE */
+  }
+
+  .dark {
+    /* Dark mode (reverse: dark brown bg, beige text) */
+    --background: 25 32% 27%;             /* #584130 */
+    --foreground: 44 46% 85%;             /* #E5DFBE */
+
+    --card: 25 32% 27%;                   /* #584130 */
+    --card-foreground: 44 46% 85%;        /* #E5DFBE */
+
+    --popover: 25 32% 27%;                /* #584130 */
+    --popover-foreground: 44 46% 85%;     /* #E5DFBE */
+
+    --primary: 44 46% 85%;                /* #E5DFBE */
+    --primary-foreground: 25 32% 27%;     /* #584130 */
+
+    --secondary: 25 32% 27%;              /* #584130 */
+    --secondary-foreground: 44 46% 85%;   /* #E5DFBE */
+
+    --muted: 25 32% 20%;                  /* even darker brown */
+    --muted-foreground: 44 46% 70%;       /* muted beige */
+
+    --accent: 44 46% 85%;                 /* #E5DFBE */
+    --accent-foreground: 25 32% 27%;      /* #584130 */
+
+    --destructive: 0 70% 40%;             /* muted red for destructive */
+    --destructive-foreground: 44 46% 85%; /* #E5DFBE */
+
+    --border: 44 46% 85%;                 /* #E5DFBE */
+    --input: 25 32% 27%;                  /* #584130 */
+    --ring: 44 46% 85%;                   /* #E5DFBE */
+
+    /* Sidebar */
+    --sidebar-background: 25 32% 27%;     /* #584130 */
+    --sidebar-foreground: 44 46% 85%;     /* #E5DFBE */
+    --sidebar-primary: 44 46% 85%;        /* #E5DFBE */
+    --sidebar-primary-foreground: 25 32% 27%; /* #584130 */
+    --sidebar-accent: 25 32% 20%;         /* even darker brown */
+    --sidebar-accent-foreground: 44 46% 85%; /* #E5DFBE */
+    --sidebar-border: 44 46% 85%;         /* #E5DFBE */
+    --sidebar-ring: 25 32% 27%;           /* #584130 */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-aptos;
+    background: hsl(var(--background)) !important;
+    color: hsl(var(--foreground)) !important;
+    overflow-x: hidden;
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Custom horizontal scrollbar using beige/dark brown */
+.horizontal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color:  #6b4022 #f9f3cd; ; /* thumb, track */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #E5DFBE; /* beige */
+  border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #584130; /* dark brown */
+  border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3e2c20; /* even darker brown for hover */
+}
+.horizontal-scroll::-webkit-scrollbar-thumb:active {
+  background: #2c1a10; /* darkest brown for active */
+}
+body {
+  @apply font-aptos;
+}
