@@ -231,7 +231,7 @@ const products = [
       "Unique Designs",
       "Sustainable Materials",
     ],
-    image: "public/hand tufted cushions.jpeg",
+    image: "hand tufted cushions.jpeg",
     wa: "https://wa.me/919896242290?text=I%20am%20interested%20in%20Throws%20and%20Cushions",
   },
   {
