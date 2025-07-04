@@ -51,7 +51,7 @@ const Header = () => {
                 alt="Pumish Enterprise Logo" 
                 className="w-15 h-12 rounded-lg" 
               />
-              <span className="text-3xl font-bold bg-gradient-to-r from-[#584130] via-[#7c6652] to-[#584130] bg-clip-text text-transparent">
+              <span className="text-3xl -mt-1 font-bold bg-gradient-to-r from-[#584130] via-[#7c6652] to-[#584130] bg-clip-text text-transparent">
                 Pumish Enterprise
               </span>
             </Link>
