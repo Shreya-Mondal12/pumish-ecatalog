@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 
+
+
 // --- AnimatedCounter Component ---
 const AnimatedCounter = ({
   target,
@@ -50,6 +52,9 @@ const AnimatedCounter = ({
   );
 };
 
+// --- Card, CardContent, Button (stub, replace with your actual components) ---
+
+
 // --- Data Arrays ---
 const productCategories = [
   {
@@ -87,7 +92,7 @@ const productCategories = [
     description: 'Elevate your space with our cushions,expertly crafted to deliver both comfort and charm.',
     image: '/wovenbg1.png',
   },
-  {
+    {
     title: 'Woven Throws',
     description: 'Wrap yourself in warmth with our woven throws,crafted to add a touch of elegance to your home.',
     image: '/throwsbg.png',
@@ -104,8 +109,9 @@ const cardData = [
         <path d="M2 21v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2" />
         <path d="M14 21v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2" />
       </svg>
+      
     ),
-    image: "/inclu.jpeg",
+    image:"/inclu.jpeg",
   },
   {
     name: "Women Empowerment",
@@ -116,7 +122,7 @@ const cardData = [
         <path d="M9 20h6" />
       </svg>
     ),
-    image: "/Women.jpeg",
+    image:"/Women.jpeg",
   },
   {
     name: "Sustainability",
@@ -126,7 +132,7 @@ const cardData = [
         <path d="M12 8V16" />
       </svg>
     ),
-    image: "/sus.jpg",
+    image:"/sus.jpg",
   },
   {
     name: "Innovation",
@@ -136,7 +142,7 @@ const cardData = [
         <path d="M9 21h6" />
       </svg>
     ),
-    image: "/inno.jpg",
+    image:"/inno.jpg",
   },
   {
     name: "Client-Centric Approach",
@@ -147,7 +153,7 @@ const cardData = [
         <path d="M4 17l2-2" />
       </svg>
     ),
-    image: "/cl.jpg",
+    image:"/cl.jpg",
   },
   {
     name: "Trust & Credibility",
@@ -155,9 +161,10 @@ const cardData = [
       <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8" stroke="#E5DFBE" strokeWidth={2}>
         <path d="M12 2l7 4v6c0 5-3.5 9.74-7 10-3.5-.26-7-5-7-10V6l7-4z" />
         <path d="M9 12l2 2l4-4" />
+
       </svg>
     ),
-    image: "trust.png",
+    image:"trust.png",
   },
 ];
 
@@ -165,7 +172,7 @@ const cardData = [
 const Index = () => {
   // Slideshow state
   const heroBgImages = [
-    '/bg11.png', '/bg3.png', '/bg4.jpeg', '/bg5.jpeg', '/bg1.jpeg', '/bg7.png'
+    '/bg11.png','/bg3.png', '/bg4.jpeg', '/bg5.jpeg', '/bg1.jpeg', '/bg7.png'
   ];
   const HERO_SLIDE_DURATION = 3000;
   const [bgIndex, setBgIndex] = useState(0);
@@ -182,12 +189,13 @@ const Index = () => {
       {/* Hero Section with Slideshow */}
       <section className="relative w-full min-h-[40vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary to-navy text-white py-[44px] sm:py-[58px] md:py-16 lg:py-[120px]">
         {/* Blue overlay for tint */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary to-navy opacity-30 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary to-navy opacity-30 z-10"></div> {/* Added z-10 to overlay */}
 
         {/* Slideshow Images */}
         {heroBgImages.map((img, idx) => (
           <div
             key={img}
+            // Use inset-0, w-full, h-full, and flex for parent div
             className={`
               absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out
               ${idx === bgIndex ? "opacity-100" : "opacity-0 pointer-events-none"}
@@ -200,13 +208,14 @@ const Index = () => {
             <img
               src={img}
               alt=""
-              // Corrected className string interpolation: use template literals consistently
               className={`w-full h-full opacity-85 transition-opacity 1.5s ${idx === bgIndex ? "animate-kenburns" : ""}`}
               draggable={false}
-              loading="eager" // Hero images should load eagerly as they are critical
               style={{
                 pointerEvents: "none",
                 objectFit: (idx === 4 && typeof window !== 'undefined' && window.innerWidth >= 768) ? 'top center' : 'cover',
+                // Optional: You can experiment with explicit width/height for 'contain' if needed
+                // minWidth: (idx === 4 && typeof window !== 'undefined' && window.innerWidth >= 768) ? '100vw' : 'auto',
+                // minHeight: (idx === 4 && typeof window !== 'undefined' && window.innerWidth >= 768) ? 'auto' : 'auto',
               }}
             />
           </div>
@@ -223,7 +232,7 @@ const Index = () => {
               </span>
             </h1>
             <p className="font-aptos italic text-sm sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto px-2 drop-shadow">
-              Redefining home textiles with innovative and eco-friendly solutions.
+              Redefining home textiles with innovative and eco-friendly solutions. 
               Creating a harmonious blend of aesthetics and sustainability.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
@@ -285,8 +294,6 @@ const Index = () => {
         </div>
       </section>
 
-      ---
-
       {/* Product Categories - Horizontal Scroll */}
       <section className="py-4 sm:py-8 md:py-12 bg-beige border-b text-darkbrown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -301,8 +308,8 @@ const Index = () => {
           <div className="overflow-x-auto horizontal-scroll">
             <div className="flex space-x-4 sm:space-x-6 pb-4" style={{ width: 'max-content' }}>
               {productCategories.map((category, index) => (
-                <Card
-                  key={index}
+                <Card 
+                  key={index} 
                   className="w-72 sm:w-80 flex-shrink-0 hover:shadow-lg transition-shadow duration-300 animate-fade-in bg-[rgba(183,139,85,0.56)] border border-darkbrown"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -311,7 +318,6 @@ const Index = () => {
                       src={category.image}
                       alt={category.title}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      loading="lazy" // Added lazy loading for off-screen images
                     />
                   </div>
                   <CardContent className="p-4 sm:p-6">
@@ -329,56 +335,51 @@ const Index = () => {
         </div>
       </section>
 
-      ---
+{/* Core Values */}
+<section className="py-8 sm:py-12 md:py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-8 sm:mb-12">
+      <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[#6b4022] mb-2 sm:mb-4">
+        Our Core Values
+      </h2>
+      <p className="text-sm sm:text-lg text-[rgb(139,69,19)] px-2">
+        Built on principles that drive our commitment to excellence
+      </p>
+    </div>
 
-      {/* Core Values */}
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[#6b4022] mb-2 sm:mb-4">
-              Our Core Values
-            </h2>
-            <p className="text-sm sm:text-lg text-[rgb(139,69,19)] px-2">
-              Built on principles that drive our commitment to excellence
-            </p>
-          </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+      {cardData.map((card, index) => (
+        <div
+          key={index}
+          className="relative overflow-hidden rounded-lg border border-darkbrown shadow-xl transition-transform duration-500 hover:-translate-y-1 hover:shadow-2xl animate-fade-in"
+          style={{
+            animationDelay: `${index * 0.1}s`,
+          }}
+        >
+          {/* Proper image */}
+          <img
+            src={card.image}
+            alt={card.name}
+            className="w-full h-60 object-cover"
+          />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {cardData.map((card, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden rounded-lg border border-darkbrown shadow-xl transition-transform duration-500 hover:-translate-y-1 hover:shadow-2xl animate-fade-in"
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
-              >
-                {/* Proper image */}
-                <img
-                  src={card.image}
-                  alt={card.name}
-                  className="w-full h-60 object-cover"
-                  loading="lazy" // Added lazy loading for off-screen images
-                />
+          {/* Optional overlay */}
+          <div className="absolute inset-0 bg-[#E5DFBE]/30"></div>
 
-                {/* Optional overlay */}
-                <div className="absolute inset-0 bg-[#E5DFBE]/30"></div>
-
-                {/* Icon + name in absolute center */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-darkbrown rounded-full flex items-center justify-center mb-11 shadow-xl">
-                    {card.icon}
-                  </div>
-                  <div className="inline-block px-1 border rounded-md bg-[#E5DFBE] bg-opacity-90 shadow text-darkbrown font-semibold text-base sm:text-lg">
-                    {card.name}
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Icon + name in absolute center */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-darkbrown rounded-full flex items-center justify-center mb-11 shadow-xl">
+              {card.icon}
+            </div>
+            <div className="inline-block px-1 border rounded-md bg-[#E5DFBE] bg-opacity-90 shadow text-darkbrown font-semibold text-base sm:text-lg">
+              {card.name}
+            </div>
           </div>
         </div>
-      </section>
-
-      ---
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Call to Action */}
       <section className="py-5 sm:py-12 md:py-16 bg-beige border text-darkbrown">
@@ -386,14 +387,14 @@ const Index = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#6b4022] mb-3 sm:mb-4">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-base sm:text-xl mb-6 sm:mb-8 text-[rgb(139,69,19)] px-2">
+          <p className="text-base sm:text-xl mb-6 sm:mb-8 text-[rgb(139,69,19)]  px-2">
             Connect with us to explore our premium collection and discover sustainable home solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto border-green-500 text-beige bg-green-700 hover:bg-green-800 text-base font-semibold hover:text-[beige] transition-all duration-300 flex items-center justify-center"
+              className="w-full sm:w-auto border-green-500 text-beige bg-green-700 hover:bg-green-800 text-base font-semibold  hover:text-[beige] transition-all duration-300 flex items-center justify-center"
               onClick={() => window.open('https://wa.me/919896242290', '_blank')}
             >
               WhatsApp Us
@@ -401,7 +402,7 @@ const Index = () => {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto bg-[#8e7055] hover:bg-[#584130] text-[#E5DFBE] text-base font-semibold shadow transition-all duration-300 flex items-center justify-center"
+              className="w-full sm:w-auto  bg-[#8e7055] hover:bg-[#584130] text-[#E5DFBE] text-base font-semibold shadow transition-all duration-300 flex items-center justify-center"
               onClick={() => window.open('mailto:anshul.singh@pumishenterprises.com', '_blank')}
             >
               Send Email
