@@ -11,7 +11,7 @@ const Mission = () => {
             Mission & Vision
           </h1>
           <p className="text-base sm:text max-w-3xl mx-auto px-2 text-[#7c6652]">
-            Our guiding principles that drive innovation, sustainability, and excellence
+            Our guiding principles that drive innovation, sustainability, and excellence 
             in everything we do.
           </p>
         </div>
@@ -33,7 +33,6 @@ const Mission = () => {
                 src="value.png"
                 alt="Our mission"
                 className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md h-[300px] object-cover border-2 border-[#a08b6d] mt-10"
-                loading="eager" // This image is likely in the initial viewport, so load it eagerly.
               />
             </div>
           </div>
@@ -58,13 +57,10 @@ const Mission = () => {
                 src="mis.png"
                 alt="Our vision"
                 className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md h-auto border-2 border-[#a08b6d] mt-3"
-                loading="lazy" // Added lazy loading
               />
             </div>
           </div>
         </section>
-
-        ---
 
         {/* Core Principles */}
         <section className="mb-12 sm:mb-16 md:mb-20">
@@ -74,7 +70,7 @@ const Mission = () => {
               The fundamental beliefs that shape our approach to business and life
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {[
               {
@@ -98,7 +94,7 @@ const Mission = () => {
                 icon: '🌍'
               }
             ].map((principle, index) => (
-              <Card
+              <Card 
                 key={index}
                 className="shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl animate-fade-in border border-[#a08b6d]"
                 style={{ backgroundColor: '#f5deb3', animationDelay: `${index * 0.1}s` }}
@@ -117,8 +113,6 @@ const Mission = () => {
           </div>
         </section>
 
-        ---
-
         {/* Impact Stories */}
         <section className="mb-12 sm:mb-16 md:mb-20 bg-[#f5deb3] rounded-lg p-4 sm:p-6 md:p-8 border border-[#a08b6d]">
           <div className="text-center mb-8 sm:mb-12">
@@ -127,7 +121,7 @@ const Mission = () => {
               How our mission and vision translate into real-world impact
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
@@ -146,7 +140,7 @@ const Mission = () => {
                 metric: '1000+ Families Helped'
               }
             ].map((story, index) => (
-              <div
+              <div 
                 key={index}
                 className="text-center animate-fade-in bg-[#E5DFBE] rounded-lg p-4 sm:p-6 mb-3 sm:mb-4 border border-[#a08b6d] shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -163,8 +157,6 @@ const Mission = () => {
           </div>
         </section>
 
-        ---
-
         {/* Future Goals */}
         <section className="mb-12 sm:mb-16 md:mb-20">
           <div className="text-center mb-8 sm:mb-12">
@@ -173,7 +165,7 @@ const Mission = () => {
               Our roadmap for continued growth and positive impact
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             <Card
               style={{ backgroundColor: '#f5deb3' }}
@@ -197,7 +189,7 @@ const Mission = () => {
                 </ul>
               </CardContent>
             </Card>
-
+            
             <Card
               style={{ backgroundColor: '#f5deb3' }}
               className="animate-fade-in border border-[#a08b6d] shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
@@ -223,8 +215,6 @@ const Mission = () => {
           </div>
         </section>
 
-        ---
-
         {/* Call to Action */}
         <section className="text-center bg-[#f5deb3] rounded-lg p-6 sm:p-8 md:p-12 border border-[#a08b6d] text-[#584130] shadow-lg animate-fade-in transition-all duration-700 ease-in-out"
           style={{ animationDelay: '0.1s' }}>
@@ -237,7 +227,7 @@ const Mission = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="w-full sm:w-auto border-green-500 text-beige bg-green-700 hover:bg-green-800 font-semibold hover:text-[beige] transition-all duration-300"
+              className="w-full sm:w-auto  border-green-500 text-beige bg-green-700 hover:bg-green-800 font-semibold hover:text-[beige] transition-all duration-300"
               onClick={() => window.open('https://wa.me/919896242290', '_blank')}
             >
               Connect with Us
