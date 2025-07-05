@@ -175,7 +175,7 @@ ${formData.message}
                   <Button
                     onClick={() => window.open('mailto:anshul.singh@pumishenterprises.com', '_blank')}
                     variant="outline"
-                    className="justify-start text-sm sm:text-base text-[#6b3e2e] border-[#a1785c] hover:bg-[#907043]"
+                    className="justify-start text-xs sm:text-base text-[#6b3e2e] border-[#a1785c] hover:bg-[#907043]"
                   >
                     <span className="mr-2">✉️</span>
                     anshul.singh@pumishenterprises.com
