@@ -9,28 +9,69 @@
     <!-- Inter as a web-safe fallback, Aptos as primary -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
 
-     
     <meta property="og:title" content="Pumish Enterprise - Premium Handcrafted Home Furnishings" />
     <meta property="og:description" content="Redefining home textiles with innovative and eco-friendly solutions. Premium handcrafted rugs, cushions, mats, and home textiles." />
     <meta property="og:type" content="website" />
-    <!-- Replace with your real image URL -->
     <meta property="og:image" content="/your-og-image.png" />
 
-    
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@pumish_enterprise" />
-    <!-- Replace with your real image URL -->
     <meta name="twitter:image" content="/your-twitter-image.png" />
 
     <style>
       body {
         font-family: 'Aptos', 'Inter', sans-serif;
       }
+      /* Spinner Overlay Styles */
+      #spinner-overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100vw; height: 100vh;
+        background: rgba(229, 223, 190, 0.85); /* semi-transparent beige */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.4s;
+      }
+      #spinner-overlay.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .spinner {
+        border: 8px solid #E5DFBE;      /* Light beige */
+        border-top: 8px solid #584130;  /* Dark brown */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg);}
+        100% { transform: rotate(360deg);}
+      }
     </style>
   </head>
 
   <body>
+    <!-- Spinner overlay (add here, before #root) -->
+    <div id="spinner-overlay">
+      <div class="spinner"></div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Hide spinner overlay when everything is loaded
+      window.addEventListener('load', function() {
+        var overlay = document.getElementById('spinner-overlay');
+        if (overlay) {
+          overlay.classList.add('hide');
+          setTimeout(function() {
+            overlay.style.display = 'none';
+          }, 400); // matches the transition duration
+        }
+      });
+    </script>
   </body>
 </html>
