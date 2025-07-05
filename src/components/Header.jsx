@@ -43,19 +43,17 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-3 md:pl-0">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center justify-start md:-ml-10">
-            <Link to="/" className="flex items-center space-x">
-              <img 
-                src="logo.png" 
-                alt="Pumish Enterprise Logo" 
-                className="w-15 h-12 rounded-lg" 
-              />
-              <span className="text-3xl -mt-1 font-bold bg-gradient-to-r from-[#584130] via-[#7c6652] to-[#584130] bg-clip-text text-transparent">
-                Pumish Enterprise
-              </span>
-            </Link>
-          </div>
+        {/* Logo */}
+        <div className="flex items-center justify-start px-2 sm:px-4 md:-ml-10">
+        <Link to="/" className="flex items-center space-x-2">
+        <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-12 md:h-12 rounded-lg border-2 border-[#584130] font-extrabold text-2xl sm:text-3xl md:text-4xl text-[#584130] bg-[#f7fcfe]">
+        P
+      </span>
+    <span className="text-lg sm:text-2xl md:text-3xl -mt-1 font-bold bg-gradient-to-r from-[#584130] via-[#7c6652] to-[#584130] bg-clip-text text-transparent">
+      Pumish Enterprise
+    </span>
+  </Link>
+</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
