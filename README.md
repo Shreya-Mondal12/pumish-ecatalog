@@ -1,16 +1,31 @@
-<<<<<<< HEAD
-# React + Vite
+A responsive static website for Pumish Enterprise, a handcrafted home furnishing brand focused on exports, sustainability, and innovation. This digital catalog showcases the brand’s elegant collections — from rugs and cushions to mats and kitchen linen — with an intuitive horizontal scroll design and seamless WhatsApp/email integration for direct inquiries.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo
+View Website [(Add Netlify/Vercel link if deployed)](https://pumish-homefurnishings.netlify.app/)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 1. Getting Started Locally
+_Clone the repository_
+git clone https://github.com/Shreya-Mondal12/pumish-ecatalog.git
 
-## Expanding the ESLint configuration
+_Change into the project directory:_
+cd pumish-ecatalog
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# pumish-ecatalog
->>>>>>> e906958c607b744fd35a95e89f3a77362a81c651
+# 2. Install Dependencies
+Install all required packages:
+npm install
+
+# 3. Run the Development Server
+Start the local development server:
+npm run dev
+
+# 4.Tailwind CSS Setup
+Tailwind is already configured. If you need to re-initialize:
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+# 5.Build for Production
+To create a production build:
+npm run build
+
