@@ -27,5 +27,6 @@ npm run build
 Tailwind is already configured. If you need to re-initialize:
 
 npm install -D tailwindcss postcss autoprefixer
+
 npx tailwindcss init -p
 
