@@ -52,7 +52,7 @@ const AnimatedCounter = ({
   );
 };
 
-// --- Card, CardContent, Button (stub, replace with your actual components) ---
+
 
 
 // --- Data Arrays ---
@@ -189,13 +189,13 @@ const Index = () => {
       {/* Hero Section with Slideshow */}
       <section className="relative w-full min-h-[40vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary to-navy text-white py-[44px] sm:py-[58px] md:py-16 lg:py-[120px]">
         {/* Blue overlay for tint */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary to-navy opacity-30 z-10"></div> {/* Added z-10 to overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary to-navy opacity-30 z-10"></div> {/*z-10  */}
 
         {/* Slideshow Images */}
         {heroBgImages.map((img, idx) => (
           <div
             key={img}
-            // Use inset-0, w-full, h-full, and flex for parent div
+          
             className={`
               absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out
               ${idx === bgIndex ? "opacity-100" : "opacity-0 pointer-events-none"}
@@ -213,9 +213,7 @@ const Index = () => {
               style={{
                 pointerEvents: "none",
                 objectFit: (idx === 4 && typeof window !== 'undefined' && window.innerWidth >= 768) ? 'top center' : 'cover',
-                // Optional: You can experiment with explicit width/height for 'contain' if needed
-                // minWidth: (idx === 4 && typeof window !== 'undefined' && window.innerWidth >= 768) ? '100vw' : 'auto',
-                // minHeight: (idx === 4 && typeof window !== 'undefined' && window.innerWidth >= 768) ? 'auto' : 'auto',
+               
               }}
             />
           </div>
