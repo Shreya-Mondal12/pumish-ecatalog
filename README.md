@@ -1,7 +1,7 @@
 A responsive static website for Pumish Enterprise, a handcrafted home furnishing brand focused on exports, sustainability, and innovation. This digital catalog showcases the brand’s elegant collections — from rugs and cushions to mats and kitchen linen — with an intuitive horizontal scroll design and seamless WhatsApp/email integration for direct inquiries.
 
 Live Demo
-View Website [(Add Netlify/Vercel link if deployed)](https://pumish-homefurnishings.netlify.app/)
+View Website [(Pumish-homefurnishings)](https://pumish-homefurnishings.netlify.app/)
 
 
 # 1. Getting Started Locally
