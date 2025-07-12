@@ -272,7 +272,7 @@ ${formData.message}
               },
               {
                 question: 'Do you ship internationally?',
-                answer: 'Yes, we ship worldwide. We have experience serving clients in 15+ countries and handle all export documentation.'
+                answer: 'Yes, we ship worldwide. We have experience serving clients in 5+ countries and handle all export documentation.'
               },
               {
                 question: 'Can you create custom designs?',
