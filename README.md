@@ -19,13 +19,13 @@ npm install
 Start the local development server:
 npm run dev
 
-# 4.Tailwind CSS Setup
-Tailwind is already configured. If you need to re-initialize:
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-
-# 5.Build for Production
+# 4.Build for Production
 To create a production build:
 npm run build
+
+# 5.Tailwind CSS Setup
+Tailwind is already configured. If you need to re-initialize:
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 
