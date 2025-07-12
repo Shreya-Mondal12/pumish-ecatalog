@@ -339,7 +339,7 @@ const ProductsSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const modalContentRef = useRef(null);
 
-  // Disable scroll when modal is open
+  
   useEffect(() => {
     if (openIndex !== null) {
       document.body.style.overflow = "hidden";
@@ -376,7 +376,7 @@ const ProductsSection = () => {
         {products.map((product, idx) => (
           <Card
             key={product.title}
-            id={product.id} // <-- For hash link scroll
+            id={product.id} 
             className="bg-[#f5deb3] shadow-md p-0 overflow-hidden flex flex-col md:flex-row-reverse items-center border border-[#6a4f2a]"
           >
             {/* Product Image (landscape, right side) */}
@@ -384,12 +384,8 @@ const ProductsSection = () => {
               className={`
                 w-full md:w-1/2 flex-shrink-0 relative group flex items-center justify-center overflow-hidden
                 ${
-                  // The condition `product.image.includes("handtuftedcushions.jpeg")` was looking for a specific path.
-                  // Instead, we can apply a consistent background or adjust based on image content if truly needed.
-                  // For now, let's keep it simple or make the background based on the overall card.
-                  // If some images have transparent backgrounds, and need a specific color, that would be different.
-                  // For the sake of this issue, let's assume a consistent background or ensure it's contained.
-                  "bg-[#e9dcc5] rounded-lg" // A slightly lighter, cohesive background for the image container
+                 
+                  "bg-[#e9dcc5] rounded-lg" // A slightly lighter, cohesive background for the img
                 }
               `}
             >
@@ -420,7 +416,7 @@ const ProductsSection = () => {
             {/* Product Info */}
             <CardContent className="flex-1 flex flex-col justify-between p-6 md:p-10 w-full md:w-1/2 min-w-0">
               {" "}
-              {/* Changed min-w-4 to min-w-0 for better flex shrinking */}
+              {/*  min-w-0 for better flex shrinking */}
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#584130] mb-2">
                   {product.title}
@@ -516,7 +512,7 @@ const ProductsSection = () => {
             <p className="text-center text-[#4b341e]">
               {products[openIndex].description}
             </p>
-            {/* Scroll Up Button at bottom right inside modal */}
+            {/* Scroll Up Button */}
             <div className="flex justify-end mt-6 mb-2">
               <button
                 className="bg-[#584130] text-[#E5DFBE] rounded-full p-3 shadow-lg hover:bg-[#7c6652] transition"
